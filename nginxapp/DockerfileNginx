@@ -1,0 +1,9 @@
+FROM ubuntu
+ENV DEBIAN_FRONTEND=noninteractive 
+RUN apt-get update
+RUN apt install nginx -y
+RUN rm -rf /var/www/html/*
+COPY default /etc/nginx/sites-enabled/
+COPY app /var/www/html/
+RUN chown -R www-data:www-data /var/www/html/
+CMD ["nginx", "-g", "daemon off;"]

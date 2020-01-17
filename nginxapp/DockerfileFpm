@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+ENV DEBIAN_FRONTEND=noninteractive 
+RUN mkdir /run/php/
+RUN apt-get update -y
+RUN apt install php-fpm -y
+COPY www.conf /etc/php/7.2/fpm/pool.d/
+CMD ["/usr/sbin/php-fpm7.2","-F"]

@@ -1,0 +1,14 @@
+version: '3'
+services:
+  phpfpm:
+    build: ./php/
+    volumes:
+      - ./app:/var/www/html
+    restart: always
+  nginx:
+    build: .
+    volumes:
+      - ./app:/var/www/html
+    restart: always
+    ports:
+      - "8085:80"

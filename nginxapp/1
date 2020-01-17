@@ -1,0 +1,6 @@
+FROM ubuntu
+ENV DEBIAN_FRONTEND=noninteractive 
+RUN apt-get update
+RUN apt install nginx -y
+COPY www.conf /etc/php/7.2/fpm/pool.d/
+CMD ["php-fpm"]

@@ -1,0 +1,7 @@
+from nginx:latest
+COPY app/ /usr/share/nginx/html
+#copy nginx.conf /etc/nginx/
+copy default.conf /etc/nginx/conf.d/
+run chown -R www-data:www-data /usr/share/nginx/html
+STOPSIGNAL SIGTERM
+CMD ["nginx", "-g", "daemon off;"] 
