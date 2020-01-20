@@ -12,4 +12,4 @@
 </head>
 
 <body>
-	<h1>Simple Database App NGINX02</h1>
+	<h1>Simple Database App NGINX</h1>

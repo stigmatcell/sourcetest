@@ -6,9 +6,11 @@ services:
       - ./app:/var/www/html
     restart: always
   nginx:
-    build: .
+          #build: .
+    build: ./nginx/
     volumes:
-      - ./app:/var/www/html
+            #- ./app:/var/www/html
+      - ./nginx/app:/usr/share/nginx/html
     restart: always
     ports:
       - "8085:80"
