@@ -11,3 +11,5 @@ CREATE DATABASE test;
     location VARCHAR(50),
     date TIMESTAMP
   );
+
+#insert into users (`id`,`firstname`,`lastname`,`email`,`age`,`location`) values (3,'lala','lili','lala@lili',12,'apa');
